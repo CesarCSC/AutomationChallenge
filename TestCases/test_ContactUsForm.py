@@ -1,6 +1,8 @@
 import unittest
 
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+
 from PageObjects.ContactUsPage import ContactUsPage
 from PageObjects.HomePage import HomePage
 
@@ -10,7 +12,7 @@ class TestHomePage(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome(executable_path='../drivers/chromedriver.exe')
+        cls.driver = webdriver.Chrome(ChromeDriverManager().install())
         cls.driver.maximize_window()
         cls.driver.implicitly_wait(5)
 
