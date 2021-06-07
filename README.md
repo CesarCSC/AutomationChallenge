@@ -17,8 +17,8 @@ Exercise 2. E-commerce site
 
 #Usage#
 
-1. Navigate to Run/ Debug configurations and add a configuration as 'Script path' with target folder as ..TestCases/test_ContactusForm.py under Python tests
-2. Navigate to file test_ContactUsForm.py and right click over it and Run test.
+1. Navigate to Run/ Debug configurations and add a unittest configuration with name 'test_ContactusForm.py' and target folder as ..testCases/test_ContactusForm.py. Select Python interpreter as default one. Click on Apply and Ok.
+2. Navigate to file test_ContactUsForm.py located under testCases folder and right click over it and Run test.
 
  
  
