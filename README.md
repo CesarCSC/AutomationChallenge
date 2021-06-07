@@ -11,7 +11,7 @@ Exercise 2. E-commerce site
 #Usage#
 1. Set up Python interpreter in Pycharm File->Settings->Project->Python Interpreter (more information: https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html):
  
-  1.1. Select Python interpreter from drop down list.
+        1.1. Select Python interpreter from drop down list.
   
 2. Install selenium and webdriver-manager if required from File->Settings->Project->Python Interpreter. 
   
