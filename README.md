@@ -5,10 +5,14 @@ Exercise 2. E-commerce site
 
 Latest Python version installed(download from here: https://www.python.org/downloads/)
 Pycharm IDE installed
-Set up Python interpreter and install selenium libs from Pycharm settings (more information: https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html)
+Set up Python interpreter and install selenium libs from Pycharm settings (more information: https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html):
+
  -File->Settings->Navigate to Project: Automation Practice
+ 
  -Select Python interpreter from drop down list, click on plus icon and search for selenium then install package.
+ 
  -Repeat above step and install webdriver-manager package
+ 
 install unittest in Pycharm terminal as: pip install unittest2
 
 #Usage#
