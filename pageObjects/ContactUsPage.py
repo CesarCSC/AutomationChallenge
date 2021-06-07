@@ -1,3 +1,4 @@
+import os
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
@@ -21,22 +22,29 @@ class ContactUsPage:
         subject.select_by_visible_text(subjectHeading)
 
     def enterEmailAddress(self, emailAddress):
-        email = self.driver.find_element(By.ID, self.contactUs_emailAddress_input_id).clear()
-        email = self.driver.find_element(By.ID, self.contactUs_emailAddress_input_id).send_keys(emailAddress)
+        email = self.driver.find_element(By.ID, self.contactUs_emailAddress_input_id)
+        email.clear()
+        email.send_keys(emailAddress)
 
     def enterOrderReference(self, orderReference):
-        order = self.driver.find_element(By.ID, self.contactUs_orderReference_input_id).clear()
-        order = self.driver.find_element(By.ID, self.contactUs_orderReference_input_id).send_keys(orderReference)
+        order = self.driver.find_element(By.ID, self.contactUs_orderReference_input_id)
+        order.clear()
+        order.send_keys(orderReference)
 
     def enterMessage(self, msg):
-        message = self.driver.find_element(By.ID, self.contactUs_message_txtBox_id).clear()
-        message = self.driver.find_element(By.ID, self.contactUs_message_txtBox_id).send_keys(msg)
+        message = self.driver.find_element(By.ID, self.contactUs_message_txtBox_id)
+        message.clear()
+        message.send_keys(msg)
 
     def attachFile(self, file):
-        email = self.driver.find_element(By.ID, self.contactUs_attachFile_btn_id).click()
+        attachFile = self.driver.find_element(By.ID, self.contactUs_attachFile_btn_id)
+        attachFile.send_keys(self.filename(file))
+
+    def filename(self, file):
+        return os.path.join(os.path.dirname(os.path.dirname(__file__)), file)
 
     def sendForm(self):
-        email = self.driver.find_element(By.ID, self.contactUs_send_btn_id).click()
+        self.driver.find_element(By.ID, self.contactUs_send_btn_id).click()
 
     def getError(self):
         return self.driver.find_element(By.XPATH, self.contactUs_error_label_xpath).text

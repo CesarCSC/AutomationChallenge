@@ -2,9 +2,8 @@ import unittest
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-
-from PageObjects.ContactUsPage import ContactUsPage
-from PageObjects.HomePage import HomePage
+from pageObjects.ContactUsPage import ContactUsPage
+from pageObjects.HomePage import HomePage
 
 
 class TestHomePage(unittest.TestCase):
@@ -27,10 +26,11 @@ class TestHomePage(unittest.TestCase):
         contactUs.selectSubjectHeading("Customer service")
         contactUs.enterEmailAddress("test@test.com")
         contactUs.enterOrderReference("12345")
+        contactUs.attachFile("data/testing.png")
         contactUs.enterMessage("Test message here")
         contactUs.sendForm()
         driver.implicitly_wait(5)
-        self.driver.save_screenshot("../Screenshots/" + "test_valid_contactUsFormSubmit.png")
+        self.driver.save_screenshot("../screenshots/" + "test_valid_contactUsFormSubmit.png")
         self.assertEqual("Your message has been successfully sent to our team.", contactUs.getMessageSent(),
                          "Contact us message sent is not displayed")
         # Navigate to ContactUs page
@@ -44,7 +44,7 @@ class TestHomePage(unittest.TestCase):
         driver.implicitly_wait(5)
         self.assertEqual("Please select a subject from the list provided.", contactUs.getError(),
                          "Subject Header is not validated")
-        self.driver.save_screenshot("../Screenshots/" + "test_invalid_subjectHeader.png")
+        self.driver.save_screenshot("../screenshots/" + "test_invalid_subjectHeader.png")
         # Validate Email address
         contactUs.selectSubjectHeading("Customer service")
         contactUs.enterEmailAddress("")
@@ -52,13 +52,13 @@ class TestHomePage(unittest.TestCase):
         driver.implicitly_wait(5)
         self.assertEqual("Invalid email address.", contactUs.getError(),
                          "Email address is not validated")
-        self.driver.save_screenshot("../Screenshots/" + "test_empty_emailAddress.png")
+        self.driver.save_screenshot("../screenshots/" + "test_empty_emailAddress.png")
         contactUs.enterEmailAddress("test.test")
         contactUs.sendForm()
         driver.implicitly_wait(5)
         self.assertEqual("Invalid email address.", contactUs.getError(),
                          "Email address is not validated")
-        self.driver.save_screenshot("../Screenshots/" + "test_invalid_emailAddress.png")
+        self.driver.save_screenshot("../screenshots/" + "test_invalid_emailAddress.png")
         # Validate Message text box
         contactUs.enterEmailAddress("test@test.com")
         contactUs.enterMessage("")
@@ -66,13 +66,13 @@ class TestHomePage(unittest.TestCase):
         driver.implicitly_wait(5)
         self.assertEqual("The message cannot be blank.", contactUs.getError(),
                          "Message is not validated")
-        self.driver.save_screenshot("../Screenshots/" + "test_invalid_message.png")
+        self.driver.save_screenshot("../screenshots/" + "test_invalid_message.png")
         # Validate Order reference
         contactUs.enterMessage("Test Message here")
         contactUs.enterOrderReference("")
         contactUs.sendForm()
         driver.implicitly_wait(5)
-        self.driver.save_screenshot("../Screenshots/" + "test_invalid_orderReference.png")
+        self.driver.save_screenshot("../screenshots/" + "test_invalid_orderReference.png")
         self.assertEqual("The order reference cannot be blank.", contactUs.getError(),
                          "Order Reference is not validated")
 
