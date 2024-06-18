@@ -3,13 +3,13 @@ Exercise 2. E-commerce site
 
 #Prerequisites#
 
-1. Latest Python version installed(download from here: https://www.python.org/downloads/).
+1. Latest Python version installed(download from here: https://www.python.org/downloads/.
 2. Pycharm IDE installed.
 3. install unittest in Pycharm terminal as: pip install unittest2 if required.
-4. Navigate to File and open project folder or clone repository from gitHub (https://github.com/CesarCSC/AutomationPractice.git).
+4. Navigate to File and open project folder or clone repository from gitHub https://github.com/CesarCSC/AutomationPractice.git.
 
 #Usage#
-1. Set up Python interpreter in Pycharm File->Settings->Project->Python Interpreter (more information: https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html):
+1. Set up Python interpreter in Pycharm File->Settings->Project->Python Interpreter more information: https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html.
  
       1.1. Select Python interpreter from drop down list.
   
