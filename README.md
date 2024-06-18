@@ -1,4 +1,4 @@
-# AutomationPractice
+# AutomationChallenge
 Exercise 2. E-commerce site
 
 #Prerequisites#
