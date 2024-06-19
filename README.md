@@ -33,7 +33,7 @@
   
       1.1. Select Python interpreter as default one. Click on Apply and Ok.
 
-4. Navigate to file test_ContactUsForm.py located under testCases folder and right click over it to Run unittest.
+4. Navigate to file test_Search.py located under testCases folder and right click over it to Run unittest.
 
  
  
