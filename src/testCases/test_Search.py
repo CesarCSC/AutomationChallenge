@@ -1,11 +1,10 @@
-import time
 import unittest
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
-from pageObjects.HomePage import HomePage
-from pageObjects.CatalogSearch import CatalogSearch
+from src.pageObjects.HomePage import HomePage
+from src.pageObjects.CatalogSearch import CatalogSearch
 
 
 # For search, the user should be able to find all products containing the keyword in the product title.

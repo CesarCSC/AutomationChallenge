@@ -1,12 +1,22 @@
 # AutomationChallenge
-Exercise 2. E-commerce site
+Exercise 2.
 
 #Prerequisites#
 
-1. Latest Python version installed(download from here: https://www.python.org/downloads/.
+1. Latest Python version installed download from here: https://www.python.org/downloads/.
 2. Pycharm IDE installed.
 3. install unittest in Pycharm terminal as: pip install unittest2 if required.
-4. Navigate to File and open project folder or clone repository from gitHub https://github.com/CesarCSC/AutomationPractice.git.
+
+#Set up from tar.gz file#
+1. Navigate to File and unzip project folder 
+2. Install the project using pip by running:
+
+   `pip install /path/to/your_project_name-version.tar.gz`
+
+3. Replace /path/to/your_project_name-version.tar.gz with the actual path to your distribution package.
+
+#Set up from cloning repository#
+1. Clone repository from gitHub https://github.com/CesarCSC/AutomationPractice.git.
 
 #Usage#
 1. Set up Python interpreter in Pycharm File->Settings->Project->Python Interpreter more information: https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html.
@@ -19,7 +29,7 @@ Exercise 2. E-commerce site
  
       1.2. Do the above step for webdriver-manager, both should be displayed in the package installed list.
  
-3. Navigate to Run/ Debug configurations and add a unittest configuration with name 'test_ContactusForm.py' and target folder as ..testCases/test_ContactusForm.py. 
+3. Navigate to Run/ Debug configurations and add an unittest configuration with name 'test_Search.py' and target folder as ...testCases/test_Search.py. 
   
       1.1. Select Python interpreter as default one. Click on Apply and Ok.
 
